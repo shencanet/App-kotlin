@@ -39,6 +39,20 @@ clientes.clear() //eliminar todos los elementos MUTABLE
 println(clientes)
 print(message = "Numero de clientes: ${clientes.size} \n")
 
+//listas no mutables
+//Divisas 
+var divisas : List<String> = listOf("Dolar", "Euro", "Yen", "Libra", "Peso")
+println(divisas)
+println("Numero de divisas: ${divisas.size}")
+println("Primera divisa: ${divisas.first()}")
+println("Ultima divisa: ${divisas.last()}")
+println("Divisa en la posicion 3: ${divisas[3]}")
+println("Divisa en la posicion 3: ${divisas.get(3)}")
+println("Divisa en la posicion 3: ${divisas.indexOf("Yen")}")
+
+
+
+
 
 
 
