@@ -19,5 +19,9 @@ println("clientes VIP: \n")
 println(clientesVIP)
 println("Numero de Clientes VIP${clientesVIP.size} ")
 
+if(clientesVIP.contains(1234))println("cliente Vip encontrado 1")
+
+if(clientesVIP.contains(1111))println("cliente Vip encontrado 2")
+
 
 }
