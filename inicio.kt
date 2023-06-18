@@ -50,6 +50,26 @@ println("Divisa en la posicion 3: ${divisas[3]}")
 println("Divisa en la posicion 3: ${divisas.get(3)}")
 println("Divisa en la posicion 3: ${divisas.indexOf("Yen")}")
 
+//listas mutables
+var divisas2 : MutableList<String> = mutableListOf("Dolar", "Euro", "Yen", "Libra", "Peso")
+println(divisas2)
+divisas2.add("Bitcoin")
+println(divisas2)
+divisas2.removeAt(2)
+println(divisas2)
+divisas2[0] = "Dolar Americano"
+println(divisas2)
+println(divisas2.first())
+println(divisas2.last())
+println(divisas2.elementAt(2))
+println(divisas2.none())
+println(divisas2.isEmpty())
+println(divisas2.isNotEmpty())
+divisas2.clear()
+
+
+
+
 
 
 
