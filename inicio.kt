@@ -33,6 +33,13 @@ println(clientes)
 clientes.add(6666) //agregar un elemento MUTABLE
 println(clientes)
 
+clientes.remove(6666) //eliminar un elemento MUTABLE
+println(clientes)
+clientes.clear() //eliminar todos los elementos MUTABLE 
+println(clientes)
+print(message = "Numero de clientes: ${clientes.size} \n")
+
+
 
 
 }
