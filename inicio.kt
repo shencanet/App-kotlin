@@ -9,4 +9,15 @@ for  (i in (0 until matriz.size)){
     for (j in (0 until matriz[i].size))
     println("Posicion[$i][$j] : ${matriz[i][j]}")
 }
+
+//colecciones set y colecciones lista
+//mutables y inmutables
+
+var clientesVIP : Set<Int> = setOf (1234, 5678, 4040) //datos ser de datos enteros
+val setMezclado : setOf(2, 4.458, "pedro", 'c')
+println("clientes VIP: \n") 
+println(clientesVIP)
+println("Numero de Clientes VIP${clientesVIP.size} ")
+
+
 }
