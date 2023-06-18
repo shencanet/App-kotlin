@@ -15,6 +15,7 @@ for  (i in (0 until matriz.size)){
 var clientesVIP : Set<Int> = setOf (1234, 5678, 4040) //datos ser de datos enteros
 val setMezclado : setOf(2, 4.458, "pedro", 'c')
 println("clientes VIP: \n") 
+//clientesVIP.add(6666) DA ERROR PORQUE ES INMUTABLE
 println(clientesVIP)
 
 println("Numero de Clientes VIP${clientesVIP.size} ")
@@ -25,6 +26,12 @@ if(clientesVIP.contains(1111))println("cliente Vip encontrado 2")
 
 
 //version mutable
+
+var clientes: MutableSet<Int> = mutableSetOf(1234, 5678, 4040)
+println("clientes: \n")
+println(clientes)
+clientes.add(6666) //agregar un elemento MUTABLE
+println(clientes)
 
 
 
