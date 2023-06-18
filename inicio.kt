@@ -25,7 +25,7 @@ if(clientesVIP.contains(1234))println("cliente Vip encontrado 1")
 if(clientesVIP.contains(1111))println("cliente Vip encontrado 2")
 
 
-//version mutable
+//version mutable 2
 
 var clientes: MutableSet<Int> = mutableSetOf(1234, 5678, 4040)
 println("clientes: \n")
