@@ -66,6 +66,8 @@ println(divisas2.none())
 println(divisas2.isEmpty())
 println(divisas2.isNotEmpty())
 divisas2.clear()
+println(divisas2.none())
+
 
 
 
