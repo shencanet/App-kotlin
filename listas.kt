@@ -33,8 +33,18 @@ while(saldo >= cantidad_a_invertir){
     if(empresa != null){
         saldo -= cantidad_a_invertir
         println("Invertimos $cantidad_a_invertir en $empresa")
+        inversiones.put(empresa, cantidad_a_invertir)
+}
+    else{
+        println("No hay mas empresas en la bolsa")
+        break
+    }
+    mostrar_saldo()
+    index++
 }
 
+index++
+}
 
 
 
