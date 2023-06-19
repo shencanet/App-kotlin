@@ -24,7 +24,7 @@ var inversiones = mutableMapOf<String, Float>()
 
 println(inversiones)
 
-var empresa: String =  "ShenCanet"
+var empresa: String? =  "null
 mostrar_saldo()
 
 var cantidad_a_invertir: Float = 90f
@@ -43,9 +43,7 @@ while(saldo >= cantidad_a_invertir){
     index++
 }
 
-index++
-}
-
+println("Terminamos con $saldo en la cuenta")
 
 
 
