@@ -24,6 +24,18 @@ var inversiones = mutableMapOf<String, Float>()
 
 println(inversiones)
 
+var empresa: String =  "ShenCanet"
+mostrar_saldo()
+
+var cantidad_a_invertir: Float = 90f
+while(saldo >= cantidad_a_invertir){
+    empresa = bolsa.elementAtOrNull(index)
+    if(empresa != null){
+        saldo -= cantidad_a_invertir
+        println("Invertimos $cantidad_a_invertir en $empresa")
+}
+
+
 
 
 
