@@ -29,3 +29,30 @@ val platos = arrayOf(
 for (plato in platos) {
     println("Nombre: ${plato.nombre}, Precio: ${plato.precio}")
 }
+
+//Crea el mismo ejercicio de antes pero añadiendo a cada conjunto de datos un array con los ingredientes de cada plato
+
+//Ahora deberiamos tener la siguiente información de cada elemento del array principal: plato, precio, lista de ingredientes
+
+
+//ADVERTENCIA: la idea NO es que toooooooooooooodos los ingredientes este en una unica string, sino que cada ingrediente sea una string
+
+
+data class Plato(val nombre: String, val precio: Double, val ingredientes: Array<String>)
+
+val platos = arrayOf(
+    Plato("Hamburguesa", 9.99, arrayOf("Pan", "Carne", "Lechuga", "Tomate", "Queso")),
+    Plato("Pizza", 12.99, arrayOf("Masa", "Salsa de tomate", "Queso", "Jamón", "Champiñones")),
+    Plato("Ensalada", 8.99, arrayOf("Lechuga", "Tomate", "Pepino", "Aceitunas", "Vinagreta")),
+    Plato("Sushi", 15.99, arrayOf("Arroz", "Alga nori", "Salmón", "Aguacate", "Salsa de soja")),
+    Plato("Pasta", 11.99, arrayOf("Pasta", "Salsa de tomate", "Albóndigas", "Queso parmesano"))
+)
+
+for (plato in platos) {
+    println("Nombre: ${plato.nombre}, Precio: ${plato.precio}")
+    println("Ingredientes:")
+    for (ingrediente in plato.ingredientes) {
+        println("- $ingrediente")
+    }
+    println()
+}
