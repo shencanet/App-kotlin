@@ -12,3 +12,14 @@ Una de las limitaciones de las funciones flecha (arrow functions), es que no tie
 this siempre apuntará a this desde el contexto en el que definimos la función (ejemplo window).
 
 Por tal razón, la función flecha () => { ... } no sabe de this.comida, por lo que this.comida es undefined.*/
+//======================================================================================================
+//======================================================================================================
+const myLifeSummedUp = ["☕", "💻", "🍷", "🍫"];
+
+for (let item in myLifeSummedUp) {
+  console.log(item); //🤔?
+}
+
+for (let item of myLifeSummedUp) {
+  console.log(item); //🤔?
+}
