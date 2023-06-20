@@ -56,3 +56,14 @@ for (plato in platos) {
     }
     println()
 }
+/*Usa un bucle do-while para mostrar por pantalla una cuenta regresiva del 9 al 0 igual que cuando hay un lanzamiento de un cohete por parte de la NASA.*/
+ 
+var contador = 9
+
+do {
+    println(contador)
+    Thread.sleep(1000) // Pausa de 1 segundo (1000 milisegundos)
+    contador--
+} while (contador >= 0)
+
+println("¡Despegue!")
