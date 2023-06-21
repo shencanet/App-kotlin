@@ -29,3 +29,21 @@ Con el bucle for-in, podemos iterar sobre propiedades enumerables. Los enumerabl
 Con un bucle for-of, podemos recorrer iterables. Un arreglo por definición es un iterable, en cada iteración la variable item es igual al elemento sobre el cual se itera en ese momento. Por ello es "☕" "💻" "🍷" "🍫".
 
 En la practica los bucles for-of son más usados y ocacionalmente los bucles for-in.*/
+
+//-------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------
+
+function greeting() {
+  throw 'Hello world!';
+}
+
+function sayHi() {
+  try {
+    const data = greeting();
+    console.log('It worked!', data);
+  } catch (e) {
+    console.log('Oh no an error!', e);
+  }
+}
+
+sayHi();
