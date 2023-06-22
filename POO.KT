@@ -22,6 +22,18 @@ class Person(var name: String = "Anonimo", var passport: String? = null) { //tip
         return this.name
      }//conseguir nombre
 
+     fun setName(name: String){
+        this.name = name
+     }//cambiar nombre
+
+        fun getPassport(): String?{
+            return this.passport
+        }//conseguir pasaporte
+
+        fun setPassport(passport: String?){
+            this.passport = passport
+        }//cambiar pasaporte
+
 
 }
 
