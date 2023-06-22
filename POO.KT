@@ -2,8 +2,14 @@
 Person.kt
 mejor el archivo igual que la clase
  
-class Person { //tipo del dato
+class Person(var name: String = "Anonimo", var passport: String? = null) { //tipo del dato
 
+
+
+    fun Person(){
+        name = "Anonimo"
+        passport = null
+    }
      var alive: Boolean = true
      fun nacer(){
             alive = true
@@ -27,6 +33,9 @@ class mainActivity : AppCompatActivity() {
         jota.nacer()
         jota.morir()
         println(jota.alive)
+
+        var anonimo: Person = Person("Anonimo", "123456789")
+        var anonimo2 = Person()
 
 
 
