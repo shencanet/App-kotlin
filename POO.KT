@@ -7,8 +7,8 @@ class Person(var name: String = "Anonimo", var passport: String? = null) { //tip
 
 
     fun Person(){
-        name = "Anonimo"
-        passport = null
+        this.name = "Anonimo"
+        this.passport = null
     }
      var alive: Boolean = true
      fun nacer(){
@@ -17,6 +17,10 @@ class Person(var name: String = "Anonimo", var passport: String? = null) { //tip
      fun morir(){
             alive = false
      }
+
+     fun getName(): String{
+        return this.name
+     }//conseguir nombre
 
 
 }
