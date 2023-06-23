@@ -60,3 +60,11 @@ const arr2 =[3, 5, 7];
 
 
 console.log([...arr1, ...arr2]);
+
+//--------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
+
+const timesThree = (num) => num * 3;
+
+//Una función pura es aquella que, dada una misma entrada, siempre regresa el mismo valor de salida y no tiene otro efecto secundario observable.
+
