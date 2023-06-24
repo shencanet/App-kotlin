@@ -1,12 +1,14 @@
-class Pokemon (private var name: String = "Pok",
-private var attackPower: Float = 30f,
-private var life: Float = 100f){
-    fun Pokemon(n: String, aP: Float){
+
+class Pokemon ( private var name: String = "Pok",
+                private var attackPower: Float = 30f,
+                private var life: Float = 100f) {
+    
+    fun Pokemon(n: String, aP: Float) {
         this.name = n
         this.attackPower = aP
         this.life = 100f
     }
-    fun attack(): String{ return this.name + " attack with " + this.attackPower + " of power" }
+    fun getName(): String{ return this.name }
 
 }
 
@@ -15,8 +17,13 @@ private var life: Float = 100f){
 
 //------------------------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------
+ FUNCION fun main(args: Array<String>) {
+    var bicho: Pokemon = Pokemon()
+    println(bicho.getName())
 
-println()
+    
+ }
+
 
 
 
