@@ -11,6 +11,7 @@ class Pokemon ( private var name: String = "Pok",
     fun getName(): String{ return this.name }
     fun getAttackPower(): Float{ return this.attackPower }
     fun getLife(): Float{ return this.life }
+    fun setLife(i: Float){this.life = i}
 
 }
 
@@ -22,6 +23,12 @@ class Pokemon ( private var name: String = "Pok",
  FUNCION fun main(args: Array<String>) {
     var bicho: Pokemon = Pokemon()
     println(bicho.getName())
+    println(bicho.getAttackPower())
+    println(bicho.getLife())
+    println("")
+    bicho.setLife(30f)
+    println(bicho.getLife())
+
 
     
  }
