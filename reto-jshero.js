@@ -68,3 +68,18 @@ const timesThree = (num) => num * 3;
 
 //Una función pura es aquella que, dada una misma entrada, siempre regresa el mismo valor de salida y no tiene otro efecto secundario observable.
 
+//--------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
+var status = '😎';
+
+setTimeout(() => {
+  const status = '😍';
+
+  const data = {
+    status: '🥑',
+    getStatus() {
+      return this.status;
+    },
+  };
+  console.log(data.getStatus());
+}, 0);
