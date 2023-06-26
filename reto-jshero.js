@@ -86,3 +86,13 @@ setTimeout(() => {
 
 /*Respuesta Correcta: A) 🥑
 Al llamar a getStatus debemos tener el cuenta el scope de las variables, recuerda que tanto let como const tienen scope de bloque, por ende buscara una variable status dentro del bloque de data y regresara el emoji de palta.*/
+
+function checkAge(age) {
+  if (age < 18) {
+    const message = "Sorry, you're too young.";
+  } else {
+    const message = "Yay! You're old enough!";
+  }
+  return message;
+}
+console.log(checkAge(21)); //🤔?
