@@ -101,3 +101,5 @@ console.log(checkAge(21)); //🤔?
 const tiene scope de bloque para las variables, cuando intentamos hacer return message la variable message no puede ser accedida. Tanto message en el bloque if como en el else son variables diferentes por que estan en bloques diferentes pese a que se llaman igual. Como no es posible acceder a la variable la respuesta es ReferenceError.*/
 
 console.log('I want pizza'[0]); //🤔?
+/*Las cadenas de texto en javascript son iterables, por ello, al igual 
+que con los arreglos es posible acceder a sus caracteres individuales con la notación de corchetes.*/
