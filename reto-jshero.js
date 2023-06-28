@@ -113,3 +113,34 @@ Por ejemplo, suponga que C = {0, 1} y k = 3 .
  00010111
 
 Cree un algoritmo que encuentre una secuencia de De Bruijn. */
+function generateDeBruijnSequence(C, k) {
+  const n = Math.pow(C.length, k); // Longitud total de la secuencia
+  const sequence = []; // Secuencia de De Bruijn
+
+  // Función recursiva para generar la secuencia
+  function generateSequence(node) {
+    for (let i = 0; i < C.length; i++) {
+      const char = C[i];
+      const nextNode = node + char;
+      
+      if (sequence.indexOf(nextNode) === -1) {
+        sequence.push(nextNode);
+        if (sequence.length === n) {
+          return;
+        }
+        generateSequence(nextNode.slice(1));
+      }
+    }
+  }
+
+  const initialNode = '0'.repeat(k - 1);
+  generateSequence(initialNode);
+  sequence.push(initialNode); // Agregar el nodo inicial al final para formar una secuencia cíclica
+  return sequence.join('');
+}
+
+// Ejemplo de uso:
+const C = ['0', '1'];
+const k = 3;
+const deBruijnSequence = generateDeBruijnSequence(C, k);
+console.log(deBruijnSequence);
