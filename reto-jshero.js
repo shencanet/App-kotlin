@@ -103,3 +103,13 @@ const tiene scope de bloque para las variables, cuando intentamos hacer return m
 console.log('I want pizza'[0]); //🤔?
 /*Las cadenas de texto en javascript son iterables, por ello, al igual 
 que con los arreglos es posible acceder a sus caracteres individuales con la notación de corchetes.*/
+
+
+/*
+ Dado un conjunto de caracteres C y un entero k , una secuencia de De Bruijn es una secuencia cíclica en la que cada posible cadena de caracteres de longitud k en C aparece exactamente una vez.
+
+Por ejemplo, suponga que C = {0, 1} y k = 3 . 
+{'000', '001', '010', '011', '100', '101', '110', '111'}
+ 00010111
+
+Cree un algoritmo que encuentre una secuencia de De Bruijn. */
