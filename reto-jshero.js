@@ -144,3 +144,8 @@ const C = ['0', '1'];
 const k = 3;
 const deBruijnSequence = generateDeBruijnSequence(C, k);
 console.log(deBruijnSequence);
+/*En este algoritmo, se utiliza una función recursiva llamada generateSequence para generar la secuencia de De Bruijn. Comienza con un nodo inicial de longitud k-1 lleno de ceros. Luego, en cada paso, se genera un nuevo nodo agregando un carácter de C al final del nodo actual. Se verifica si el nuevo nodo ya está presente en la secuencia; si no lo está, se agrega a la secuencia y se llama recursivamente a la función con el último carácter del nuevo nodo eliminado (para mantener el tamaño de k). El proceso continúa hasta que la secuencia tenga una longitud igual a n (todas las cadenas de caracteres posibles de longitud k en C).
+
+Finalmente, se agrega el nodo inicial al final de la secuencia para hacerla cíclica. La secuencia resultante se devuelve como una cadena de caracteres.
+
+En el ejemplo de uso proporcionado, el código generará una secuencia de De Bruijn con el conjunto de caracteres C = ['0', '1'] y k = 3, y la imprimirá en la consola.*/
