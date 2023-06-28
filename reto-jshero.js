@@ -149,3 +149,8 @@ console.log(deBruijnSequence);
 Finalmente, se agrega el nodo inicial al final de la secuencia para hacerla cíclica. La secuencia resultante se devuelve como una cadena de caracteres.
 
 En el ejemplo de uso proporcionado, el código generará una secuencia de De Bruijn con el conjunto de caracteres C = ['0', '1'] y k = 3, y la imprimirá en la consola.*/
+
+function sum(num1, num2 = num1) {
+  console.log(num1 + num2);
+}
+sum(10); //🤔?
