@@ -159,3 +159,13 @@ sum(10); //🤔?
 //------------------------------------------------------------------------------------------
 let newList = [1, 2, 3].push(4);
 console.log(newList.push(5)); //🤔?
+/*Respuesta Correcta: D) TypeError: newList.push is not a function
+El método push regresa la longitud de un arreglo y no el arreglo en si mismo, podemos ver este comportamiento si hacemos lo siguiente:
+
+  let newList = [1, 2, 3].push(4);
+ 
+ console.log(typeof newList); // number  
+
+
+
+Después de aplicar por primera vez el método push, newList ahora ya no es un arreglo, sino un primitivo de tipo number entonces cuando intentam*/
