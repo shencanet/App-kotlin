@@ -258,3 +258,62 @@ const arr = [1, 1, 2, 2, 2, 3];
 const ocurrencias = contarOcurrencias(arr);
 console.log(ocurrencias);
 /*Este programa utiliza un objeto para almacenar el número de ocurrencias de cada elemento. Luego, se recorre la matriz y se incrementa el número de ocurrencias de cada elemento en el objeto. Finalmente, el objeto se devuelve como resultado.*/
+
+class Nodo {
+  constructor(valor) {
+    this.valor = valor;
+    this.izquierda = null;
+    this.derecha = null;
+  }
+}
+
+function imprimirBoustrophedon(raiz) {
+  if (!raiz) {
+    return [];
+  }
+  
+  const resultado = [];
+  const cola = [raiz];
+  let nivelActual = 1;
+  
+  while (cola.length > 0) {
+    const nivel = [];
+    const longitudCola = cola.length;
+    
+    for (let i = 0; i < longitudCola; i++) {
+      const nodo = cola.shift();
+      
+      if (nivelActual % 2 === 1) {
+        nivel.push(nodo.valor); // Insertar de izquierda a derecha
+      } else {
+        nivel.unshift(nodo.valor); // Insertar de derecha a izquierda
+      }
+      
+      if (nodo.izquierda) {
+        cola.push(nodo.izquierda);
+      }
+      
+      if (nodo.derecha) {
+        cola.push(nodo.derecha);
+      }
+    }
+    
+    resultado.push(...nivel);
+    nivelActual++;
+  }
+  
+  return resultado;
+}
+
+// Crear el árbol
+const raiz = new Nodo(1);
+raiz.izquierda = new Nodo(2);
+raiz.derecha = new Nodo(3);
+raiz.izquierda.izquierda = new Nodo(4);
+raiz.izquierda.derecha = new Nodo(5);
+raiz.derecha.izquierda = new Nodo(6);
+raiz.derecha.derecha = new Nodo(7);
+
+// Imprimir los nodos en orden de boustrophedon
+console.log(imprimirBoustrophedon(raiz)); // [1, 3, 2, 4, 5, 6, 7]
+/*En este ejemplo, creamos un árbol binario con los valores proporcionados y luego llamamos a la función imprimirBoustrophedon pasando la raíz del árbol. La función utiliza una cola para realizar un recorrido en anchura, alternando el orden de inserción de los nodos en cada nivel según el patrón de boustrophedon. Finalmente, devuelve un arreglo con los valores de los nodos en el orden especificado.*/
