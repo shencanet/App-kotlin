@@ -235,3 +235,26 @@ console.log(esPalindromo(1010)); // false
 
 
 /*Este programa utiliza un enfoque matemático para revertir el número mientras se comprueba si es un palíndromo. Si el número es negativo o termina con cero (excepto el número 0 en sí), se considera que no es un palíndromo. Luego, se utiliza un bucle while para invertir la mitad del número y se compara con la otra mitad original para verificar si es un palíndromo. */
+
+//------------------------------------------------------------------------------------------
+/*Escriba un programa que encuentre el número de ocurrencias de cada elemento en una matriz. Por ejemplo, si la entrada es [1, 1, 2, 2, 2, 3] , la salida debe ser algo como esto:*/
+
+
+function contarOcurrencias(arr) {
+  const ocurrencias = {};
+  for (let i = 0; i < arr.length; i++) {
+    const elemento = arr[i];
+    if (ocurrencias[elemento]) {
+      ocurrencias[elemento]++;
+    } else {
+      ocurrencias[elemento] = 1;
+    }
+  }
+  return ocurrencias;
+}
+
+// Ejemplo de uso:
+const arr = [1, 1, 2, 2, 2, 3];
+const ocurrencias = contarOcurrencias(arr);
+console.log(ocurrencias);
+/*Este programa utiliza un objeto para almacenar el número de ocurrencias de cada elemento. Luego, se recorre la matriz y se incrementa el número de ocurrencias de cada elemento en el objeto. Finalmente, el objeto se devuelve como resultado.*/
