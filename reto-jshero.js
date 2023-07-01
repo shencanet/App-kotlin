@@ -206,4 +206,7 @@ Una variable de tipo Symbol cumple con 3 caracteristicas principales
 
 El primer console.log imprime el objeto en su totalidad, incluyendo los valores no enumerables, por ello podemos ver la key de tipo Symbol y su valor un string con valor b.
 
-Al intentar obtener las keys del objeto con Object.keys obtendremos un arreglo vacio justamente por que el Symbol no es un elemento que se pueda enumerar, de esta manera es posible "ocultar" ciertas propiedades de un objeto.*/
+Al intentar obtener las keys del objeto con Object.keys obtendremos un arreglo vacio justamente por que el Symbol no es un elemento que se pueda enumerar, de esta manera es posible "ocultar" ciertas propiedades de un objeto.
+//------------------------------------------------------------------------------------------
+Escriba un programa que compruebe si un número entero es un palíndromo. Por ejemplo, 121 es un palíndromo, así como 888 . 678 no es un palíndromo. No convierta el número entero en una cadena. */
+
