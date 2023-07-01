@@ -190,3 +190,8 @@ Si volvemos a escribir la función pero esta vez teniendo en cuenta lo anterior 
 
 
 */
+const info = {
+  [Symbol('a')]: 'b'
+}
+console.log(info); 🤔?
+console.log(Object.keys(info)); 🤔?
