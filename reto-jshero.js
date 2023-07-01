@@ -210,3 +210,28 @@ Al intentar obtener las keys del objeto con Object.keys obtendremos un arreglo v
 //------------------------------------------------------------------------------------------
 Escriba un programa que compruebe si un número entero es un palíndromo. Por ejemplo, 121 es un palíndromo, así como 888 . 678 no es un palíndromo. No convierta el número entero en una cadena. */
 
+function esPalindromo(numero) {
+  if (numero < 0 || (numero % 10 === 0 && numero !== 0)) {
+    return false;
+  }
+  
+  let numeroInvertido = 0;
+  let num = numero;
+  
+  while (num > numeroInvertido) {
+    numeroInvertido = (numeroInvertido * 10) + (num % 10);
+    num = Math.floor(num / 10);
+  }
+  
+  return num === numeroInvertido || num === Math.floor(numeroInvertido / 10);
+}
+
+// Ejemplos de uso:
+console.log(esPalindromo(121)); // true
+console.log(esPalindromo(888)); // true
+console.log(esPalindromo(678)); // false
+console.log(esPalindromo(-10)); // FALSE
+console.log(esPalindromo(1010)); // false
+
+
+/*Este programa utiliza un enfoque matemático para revertir el número mientras se comprueba si es un palíndromo. Si el número es negativo o termina con cero (excepto el número 0 en sí), se considera que no es un palíndromo. Luego, se utiliza un bucle while para invertir la mitad del número y se compara con la otra mitad original para verificar si es un palíndromo. */
