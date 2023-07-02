@@ -317,3 +317,8 @@ raiz.derecha.derecha = new Nodo(7);
 // Imprimir los nodos en orden de boustrophedon
 console.log(imprimirBoustrophedon(raiz)); // [1, 3, 2, 4, 5, 6, 7]
 /*En este ejemplo, creamos un árbol binario con los valores proporcionados y luego llamamos a la función imprimirBoustrophedon pasando la raíz del árbol. La función utiliza una cola para realizar un recorrido en anchura, alternando el orden de inserción de los nodos en cada nivel según el patrón de boustrophedon. Finalmente, devuelve un arreglo con los valores de los nodos en el orden especificado.*/
+
+//------------------------------------------------------------------------------------------
+const name = "Lydia"
+
+console.log(name()) //🤔?
