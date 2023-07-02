@@ -363,4 +363,41 @@ var k1 = 23;
 console.log(encuentraSuma(lista, k1)); // Devuelve true
 //------------------------------------------------------------------------------------------
 /*
-Dado un grafo no dirigido G, compruebe si es bipartito. Recuerda que un grafo es bipartito si sus vértices se pueden dividir en dos conjuntos independientes, U y V, de modo que ninguna arista conecte los vértices del mismo conjunto. */
+Dado un grafo no dirigido G, compruebe si es bipartito. Recuerda que un grafo es bipartito si sus vértices se pueden dividir en dos conjuntos independientes, U y V, de modo que ninguna arista conecte los vértices del mismo conjunto. 
+Para comprobar si un grafo no dirigido G es bipartito, puedes utilizar el algoritmo de búsqueda en anchura (BFS) para colorear los vértices en dos conjuntos diferentes*/
+function esBipartito(grafo) {
+  const visitados = {};
+  const colores = {};
+
+  // Obtener el primer vértice del grafo
+  const primerVertice = Object.keys(grafo)[0];
+  colores[primerVertice] = 0;
+
+  // Utilizar una cola para realizar la búsqueda en anchura
+  const cola = [primerVertice];
+
+  while (cola.length > 0) {
+    const verticeActual = cola.shift();
+
+    // Verificar si el vértice actual ha sido visitado
+    if (visitados[verticeActual]) {
+      continue;
+    }
+
+    visitados[verticeActual] = true;
+
+    // Recorrer los vecinos del vértice actual
+    for (const vecino of grafo[verticeActual]) {
+      if (!colores[vecino]) {
+        // Asignar un color diferente al vecino
+        colores[vecino] = 1 - colores[verticeActual];
+        cola.push(vecino);
+      } else if (colores[vecino] === colores[verticeActual]) {
+        // Si el vecino tiene el mismo color, el grafo no es bipartito
+        return false;
+      }
+    }
+  }
+
+  return true;
+}
