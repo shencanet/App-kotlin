@@ -329,3 +329,10 @@ name no es ni hace referencia a una función, no tiene sentido intentar invocar 
 No pude ser SyntaxError por que no se cometio ningún error de tipeo, el código no esta mal escrito pero tampoco es un código valido. No puede ser ReferenceError por que no hay problemas de referencia al intentar acceder a la variable name.
 
 Se genera una excepción de tipo TypeError cuando un valor no es del tipo esperado, entonces se lanza un TypeError: name is not a function!*/
+
+//------------------------------------------------------------------------------------------
+/*Dada una lista de números y un número k , devuelve si dos números cualesquiera de la lista suman k .
+
+Por ejemplo, dado [10, 15, 3, 7] y k de 17 , devuelve verdadero ya que 10 + 7 es 17 .
+
+Bonificación: ¿Puedes hacer esto en una sola pasada? */
