@@ -335,4 +335,29 @@ Se genera una excepción de tipo TypeError cuando un valor no es del tipo espera
 
 Por ejemplo, dado [10, 15, 3, 7] y k de 17 , devuelve verdadero ya que 10 + 7 es 17 .
 
-Bonificación: ¿Puedes hacer esto en una sola pasada? */
+Bonificación: ¿Puedes hacer esto en una sola pasada? 
+
+Sí, es posible resolver este problema en una sola pasada utilizando un enfoque de hash table (tabla hash) en JavaScript. Aquí tienes una implementación que cumple con los requisitos:*/
+
+function encuentraSuma(lista, k1) {
+  var complementos = {};
+
+  for (var i = 0; i < lista.length; i++) {
+    var num = lista[i];
+    var complemento = k1 - num;
+
+    if (complementos[complemento]) {
+      return true;
+    }
+
+    complementos[num] = true;
+  }
+
+  return false;
+}
+
+// Ejemplo de uso
+var lista = [10, 15, 3, 7];
+var k1 = 23;
+
+console.log(encuentraSuma(lista, k1)); // Devuelve true
