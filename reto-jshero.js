@@ -401,3 +401,17 @@ function esBipartito(grafo) {
 
   return true;
 }
+
+// Ejemplo de grafo no dirigido
+const grafo = {
+  A: ['B', 'C'],
+  B: ['A', 'C'],
+  C: ['A', 'B', 'D'],
+  D: ['C']
+};
+
+if (esBipartito(grafo)) {
+  console.log("El grafo es bipartito");
+} else {
+  console.log("El grafo no es bipartito");
+}
