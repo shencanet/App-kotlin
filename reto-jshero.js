@@ -361,3 +361,6 @@ var lista = [10, 15, 3, 7];
 var k1 = 23;
 
 console.log(encuentraSuma(lista, k1)); // Devuelve true
+//------------------------------------------------------------------------------------------
+/*
+Dado un grafo no dirigido G, compruebe si es bipartito. Recuerda que un grafo es bipartito si sus vértices se pueden dividir en dos conjuntos independientes, U y V, de modo que ninguna arista conecte los vértices del mismo conjunto. */
