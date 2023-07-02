@@ -322,3 +322,10 @@ console.log(imprimirBoustrophedon(raiz)); // [1, 3, 2, 4, 5, 6, 7]
 const name = "Lydia"
 
 console.log(name()) //🤔?
+
+/*Respuesta Correcta: C) TypeError
+name no es ni hace referencia a una función, no tiene sentido intentar invocar a un string como si fuera una función.
+
+No pude ser SyntaxError por que no se cometio ningún error de tipeo, el código no esta mal escrito pero tampoco es un código valido. No puede ser ReferenceError por que no hay problemas de referencia al intentar acceder a la variable name.
+
+Se genera una excepción de tipo TypeError cuando un valor no es del tipo esperado, entonces se lanza un TypeError: name is not a function!*/
