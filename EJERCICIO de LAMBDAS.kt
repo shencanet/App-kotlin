@@ -39,3 +39,5 @@ fun main() {
     }
     println("¿Es guay? $isCool")
 }
+/* 
+Estas expresiones lambda implementan las condiciones específicas para cada caso. En el caso de comprobar si un número es guay, se utiliza un bucle while para sumar números consecutivos hasta alcanzar o superar el número dado. Si la suma es igual al número, se considera guay; de lo contrario, no lo es.*/
