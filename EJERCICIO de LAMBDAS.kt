@@ -11,3 +11,31 @@ Llama a dicha funcion de orden superior con expresiones lambdas que hagan lo sig
 fun higherOrderFunction(number: Int, condition: (Int) -> Boolean): Boolean {
     return condition(number)
 }
+
+fun main() {
+    val number = 10
+    
+    val isEven = higherOrderFunction(number) { it % 2 == 0 }
+    println("¿Es par? $isEven")
+    
+    val isPrime = higherOrderFunction(number) { n ->
+        if (n < 2) return@higherOrderFunction false
+        for (i in 2 until n) {
+            if (n % i == 0) return@higherOrderFunction false
+        }
+        return@higherOrderFunction true
+    }
+    println("¿Es primo? $isPrime")
+    
+    val isCool = higherOrderFunction(number) { n ->
+        var sum = 0
+        var i = 1
+        while (sum < n) {
+            sum += i
+            if (sum == n) return@higherOrderFunction true
+            i++
+        }
+        return@higherOrderFunction false
+    }
+    println("¿Es guay? $isCool")
+}
