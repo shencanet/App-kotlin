@@ -458,3 +458,10 @@ function myFunction() {
 console.log(myFunction());
 /*
 El modo estricto nos permite escribir código más seguro, habilita restricciones a nuestro código, En myFunction() no vamos a poder usar variables no declarada como es el caso de "pi".*/
+
+//------------------------------------------------------------------------------------------
+/* Dada una matriz de enteros, encuentre el primer entero positivo faltante en tiempo lineal y espacio constante. En otras palabras, encuentre el entero positivo más bajo que no existe en la matriz. La matriz también puede contener duplicados y números negativos.
+
+Por ejemplo, la entrada [3, 4, -1, 1] debería dar 2 . La entrada [1, 2, 0] debería dar 3 .
+
+Puede modificar la matriz de entrada en el lugar. */

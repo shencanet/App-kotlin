@@ -19,4 +19,5 @@ function cuentaRegresiva(numeroInicial, tiempoEntreNumeros) {
 }
 
 // Ejemplo de uso: cuenta regresiva del 5 al 0 con un intervalo de 1000 milisegundos (1 segundo)
-cuentaRegresiva(5.1, 1000);
+cuentaRegresiva(5, 1000);
+
