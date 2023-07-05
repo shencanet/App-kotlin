@@ -465,3 +465,44 @@ El modo estricto nos permite escribir código más seguro, habilita restriccione
 Por ejemplo, la entrada [3, 4, -1, 1] debería dar 2 . La entrada [1, 2, 0] debería dar 3 .
 
 Puede modificar la matriz de entrada en el lugar. */
+
+function encontrarEnteroFaltante(matriz) {
+  const n = matriz.length;
+
+  // Paso 1: Mover todos los números positivos hacia la parte izquierda de la matriz
+  let j = 0;
+  for (let i = 0; i < n; i++) {
+    if (matriz[i] > 0) {
+      // Intercambiar el número positivo con el número en la posición j
+      [matriz[i], matriz[j]] = [matriz[j], matriz[i]];
+      j++;
+    }
+  }
+
+  // Paso 2: Marcar los elementos presentes
+  for (let i = 0; i < j; i++) {
+    const num = Math.abs(matriz[i]);
+    if (num <= j) {
+      // Marcar el elemento en la posición num-1 como negativo
+      matriz[num - 1] = -Math.abs(matriz[num - 1]);
+    }
+  }
+
+  // Paso 3: Encontrar el primer entero positivo faltante
+  for (let i = 0; i < j; i++) {
+    if (matriz[i] > 0) {
+      // Si el elemento es positivo, el índice (i+1) es el entero faltante
+      return i + 1;
+    }
+  }
+
+  // Si todos los números del 1 al j están presentes, el entero faltante es j+1
+  return j + 1;
+}
+
+// Ejemplo de uso:
+const matriz1 = [3, 4, -1, 1];
+console.log("El primer entero positivo faltante en la matriz [3, 4, -1, 1] es:", encontrarEnteroFaltante(matriz1));
+
+const matriz2 = [1, 2, 0];
+console.log("El primer entero positivo faltante en la matriz [1, 2, 0] es:", encontrarEnteroFaltante(matriz2));
