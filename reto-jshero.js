@@ -506,3 +506,14 @@ console.log("El primer entero positivo faltante en la matriz [3, 4, -1, 1] es:",
 
 const matriz2 = [1, 2, 0];
 console.log("El primer entero positivo faltante en la matriz [1, 2, 0] es:", encontrarEnteroFaltante(matriz2));
+
+
+//------------------------------------------------------------------------------------------
+const fruits = [
+  { id: 1, name: 'Lime', quantity: 5 },
+  { id: 2, name: 'Apple', quantity: 30 },
+  { id: 3, name: 'Pineapple', quantity: 3 },
+];
+
+const count = fruits.some((fruit) => fruit.quantity > 5);
+

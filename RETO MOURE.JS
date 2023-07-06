@@ -16,6 +16,7 @@ function cuentaRegresiva(numeroInicial, tiempoEntreNumeros) {
 
     contador--;
   }, tiempoEntreNumeros);
+  console.log("Feliz Navidad")
 }
 
 // Ejemplo de uso: cuenta regresiva del 5 al 0 con un intervalo de 1000 milisegundos (1 segundo)
