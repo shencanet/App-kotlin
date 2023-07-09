@@ -1,7 +1,16 @@
-function cuentaRegresiva(numeroInicial, tiempoEntreNumeros) {
+
+/*
+ * Crea una función que reciba dos parámetros para crear una cuenta atrás.
+ * - El primero, representa el número en el que comienza la cuenta.
+ * - El segundo, los segundos que tienen que transcurrir entre cada cuenta.
+ * - Sólo se aceptan números enteros positivos.
+ * - El programa finaliza al llegar a cero.
+ * - Debes imprimir cada número de la cuenta atrás.
+ */
+function cuentaRegresiva(numeroInicial, tiempoEntreNumeros, mensaje) {
   // Validar si los parámetros son números enteros
-  if (!Number.isInteger(numeroInicial) || !Number.isInteger(tiempoEntreNumeros)) {
-    console.log('Los parámetros deben ser números enteros.');
+  if (!Number.isInteger(numeroInicial) || !Number.isInteger(tiempoEntreNumeros) || numeroInicial <= 0 || tiempoEntreNumeros <= 0) {
+    console.log('Los parámetros deben ser números enteros Positivos.');
     return;
   }
 
@@ -12,13 +21,17 @@ function cuentaRegresiva(numeroInicial, tiempoEntreNumeros) {
 
     if (contador === 0) {
       clearInterval(intervalo);
+      setTimeout(() => {
+      console.log(mensaje)
+        
+      },1500);
     }
 
     contador--;
   }, tiempoEntreNumeros);
-  console.log("Feliz Navidad")
+  console.log(`Contando...`);
 }
 
-// Ejemplo de uso: cuenta regresiva del 5 al 0 con un intervalo de 1000 milisegundos (1 segundo)
-cuentaRegresiva(5, 1000);
+// Ejemplo de uso:
+cuentaRegresiva(10, 1000, "Welcome to Resurrection Fest 2024")
 
