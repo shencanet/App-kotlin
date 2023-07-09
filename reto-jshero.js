@@ -562,3 +562,8 @@ Los valores falsy son: false, 0, "" (cualquier cadena vacía), undefined, null, 
 La primera parte de la expresión es una cadena vacía que vendría a representar un valor falsy y por ello la segunda parte de la expresión n t no se ejecuta.
 
 En conclusión, la respuesta es: Impossible! You should see a therapist after so much JavaScript lol*/
+
+const one = false || {} || null;
+const two = null || false || '';
+const three = [] || 0 || true;
+console.log(one, two, three); // 🤔?
