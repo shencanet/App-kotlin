@@ -580,3 +580,16 @@ Para la variable two: null || false || "" Primero evaluamos null || false, null 
 Entonces nos queda false || "", y obtenemos como resultado la cadena vacía "".
 
 Para la variable three: [] || 0 || true Primero evaluamos [] || 0, el arreglo vacío es un valor truthy por lo que 0 no se ejecuta. Entonces nos queda [] || true, nuevamente el arreglo vacío es truthy y esta vez es true quien no se llega a ejecutar, entonces el resultado es [].*/
+
+//------------------------------------------------------------------------------------------
+const myPromise = () => Promise.resolve('I have resolved!');
+function firstFunction() {
+  myPromise().then((res) => console.log(res));
+  console.log('second');
+}
+async function secondFunction() {
+  console.log(await myPromise());
+  console.log('second');
+}
+firstFunction();
+secondFunction();
