@@ -605,4 +605,81 @@ Puedes aprender un poco más sobre asincronia en javascript en los siguientes vi
 
 Event Loop: Entender el asincronismo en JavaScript
 
-Asincronismo en JavaScript */
+Asincronismo en JavaScript 
+
+
+Dada una lista de enteros, escribe una función que devuelva la mayor suma de números no adyacentes. Los números pueden ser 0 o negativos.
+
+Por ejemplo, [2, 4, 6, 2, 5] debería devolver 13 , ya que elegimos 2 , 6 y 5 . [5, 1, 1, 5] debería devolver 10 , ya que elegimos 5 y 5 .
+
+Seguimiento: ¿Puedes hacer esto en tiempo O(N) y espacio constante? */
+
+function maxNonAdjacentSum(nums) {
+  if (nums.length === 0) {
+    return 0; // Si la lista está vacía, la suma máxima es 0
+  }
+
+  let prevMaxSum = 0; // Suma máxima considerando el elemento anterior
+  let currMaxSum = 0; // Suma máxima considerando el elemento actual
+
+  for (let i = 0; i < nums.length; i++) {
+    const temp = currMaxSum; // Guardamos la suma máxima anterior antes de actualizarla
+
+    // La nueva suma máxima considera el elemento actual y la suma máxima anterior sin el elemento actual
+    currMaxSum = Math.max(currMaxSum, prevMaxSum + nums[i]);
+
+    // La suma máxima anterior se actualiza con la suma máxima anterior sin el elemento actual
+    prevMaxSum = temp;
+  }
+
+  return currMaxSum; // Devolvemos la suma máxima considerando todos los elementos
+}
+
+// Ejemplo 1
+const nums1 = [2, 4, 6, 2, 5];
+const result1 = maxNonAdjacentSum(nums1);
+console.log(result1); // Output: 13
+
+// Ejemplo 2
+const nums2 = [5, 1, 1, 5];
+const result2 = maxNonAdjacentSum(nums2);
+console.log(result2); // Output: 10
+
+/*Sí, puedo ayudarte a escribir una función en JavaScript que resuelva este problema y tenga un tiempo de ejecución O(N) y espacio constante. Aquí tienes el código paso a paso con ejemplos:
+
+javascript
+
+function maxNonAdjacentSum(nums) {
+  if (nums.length === 0) {
+    return 0; // Si la lista está vacía, la suma máxima es 0
+  }
+
+  let prevMaxSum = 0; // Suma máxima considerando el elemento anterior
+  let currMaxSum = 0; // Suma máxima considerando el elemento actual
+
+  for (let i = 0; i < nums.length; i++) {
+    const temp = currMaxSum; // Guardamos la suma máxima anterior antes de actualizarla
+
+    // La nueva suma máxima considera el elemento actual y la suma máxima anterior sin el elemento actual
+    currMaxSum = Math.max(currMaxSum, prevMaxSum + nums[i]);
+
+    // La suma máxima anterior se actualiza con la suma máxima anterior sin el elemento actual
+    prevMaxSum = temp;
+  }
+
+  return currMaxSum; // Devolvemos la suma máxima considerando todos los elementos
+}
+
+// Ejemplo 1
+const nums1 = [2, 4, 6, 2, 5];
+const result1 = maxNonAdjacentSum(nums1);
+console.log(result1); // Output: 13
+
+// Ejemplo 2
+const nums2 = [5, 1, 1, 5];
+const result2 = maxNonAdjacentSum(nums2);
+console.log(result2); // Output: 10
+
+En el código, utilizamos dos variables prevMaxSum y currMaxSum para realizar un seguimiento de la suma máxima considerando el elemento anterior y la suma máxima considerando el elemento actual, respectivamente. Iteramos por la lista de números y en cada paso, actualizamos estas variables utilizando la relación de recursión currMaxSum = max(currMaxSum, prevMaxSum + nums[i]). Al final, devolvemos la suma máxima considerando todos los elementos.
+
+El código tiene un tiempo de ejecución O(N), donde N es el número de elementos en la lista, ya que solo recorremos la lista una vez. También utiliza espacio constante, ya que solo se utilizan dos variables adicionales sin importar el tamaño de la lista.*/
