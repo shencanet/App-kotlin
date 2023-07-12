@@ -683,3 +683,15 @@ console.log(result2); // Output: 10
 En el código, utilizamos dos variables prevMaxSum y currMaxSum para realizar un seguimiento de la suma máxima considerando el elemento anterior y la suma máxima considerando el elemento actual, respectivamente. Iteramos por la lista de números y en cada paso, actualizamos estas variables utilizando la relación de recursión currMaxSum = max(currMaxSum, prevMaxSum + nums[i]). Al final, devolvemos la suma máxima considerando todos los elementos.
 
 El código tiene un tiempo de ejecución O(N), donde N es el número de elementos en la lista, ya que solo recorremos la lista una vez. También utiliza espacio constante, ya que solo se utilizan dos variables adicionales sin importar el tamaño de la lista.*/
+
+//------------------------------------------------------------------------------------------
+function compareMembers(person1, person2 = person) {
+  if (person1 !== person2) {
+    console.log('Not the same!');
+  } else {
+    console.log('They are the same!');
+  }
+}
+
+const person = { name: 'Lydia' };
+compareMembers(person);
