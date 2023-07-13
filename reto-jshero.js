@@ -698,4 +698,15 @@ compareMembers(person);
 /*Respuesta Correcta: B) They are the same!
 Tanto el parámetro person1 como person2 adoptará el valor de person, osea el objeto { name: "Lydia" }.
 
-Los objetos se pasan por referencia. En el ejemplo, person1 y person2 apuntan a la misma dirección de memoria entonces la condición del if no se cumple y pasamos a imprimir They are the same!./
+Los objetos se pasan por referencia. En el ejemplo, person1 y person2 apuntan a la misma dirección de memoria entonces la condición del if no se cumple y pasamos a imprimir They are the same!.*/
+
+const colorConfig = {
+  red: true,
+  blue: false,
+  green: true,
+  black: true,
+  yellow: false,
+};
+
+const colors = ['pink', 'red', 'blue'];
+console.log(colorConfig.colors[1]);
