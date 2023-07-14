@@ -719,4 +719,15 @@ En javascript existen 2 maneras de acceder a las propiedades de los objetos, por
 
 Cuando hacemos colorConfig.colors[1] literalmente estamos buscando una propiedad colors en el objeto colorConfig y como no existe esta propiedad entonces obtenemos un undefiend, entonces ahora javascript intentará hacer undefined[1] y esto no es un código valido, por ello la consola muestra un TypeError.
 
-Cuando queremos usar variables para hacer lo que se denomina acceso a propiedades dinámicas de objetos necesitamos usar la notación de corchetes: colorConfig[colors[1]] que nos devolverá true, el valor de la propiedad red del objeto colorConfig.*/
+Cuando queremos usar variables para hacer lo que se denomina acceso a propiedades dinámicas de objetos necesitamos usar la notación de corchetes: colorConfig[colors[1]] que nos devolverá true, el valor de la propiedad red del objeto colorConfig.
+
+//------------------------------------------------------------------------------------------
+¿Cuál de estos métodos modifica el array original?*/
+
+const emojis = ['✨', '🥑', '😍'];
+emojis.map((x) => x + '✨');//no modifica el array original
+emojis.filter((x) => x !== '🥑');//no modifica el array original
+emojis.find((x) => x !== '🥑');//no modifica el array original
+emojis.reduce((acc, cur) => acc + '✨');//no modifica el array original
+emojis.slice(1, 2, '✨');//no modifica el array original
+emojis.splice(1, 2, '✨');//modifica el array original
