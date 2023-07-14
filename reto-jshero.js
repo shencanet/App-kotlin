@@ -731,3 +731,7 @@ emojis.find((x) => x !== '🥑');//no modifica el array original
 emojis.reduce((acc, cur) => acc + '✨');//no modifica el array original
 emojis.slice(1, 2, '✨');//no modifica el array original
 emojis.splice(1, 2, '✨');//modifica el array original
+/*Respuesta Correcta: D) splice
+splice es un método mutable de arreglos capaz de agregar, eliminar o reemplazar los items.
+
+El resto de los métodos son usados mucho en programación funcional y por ende son inmutables./
