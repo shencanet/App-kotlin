@@ -764,3 +764,5 @@ Ahora info se ve así:
 
 
 En ningún momento modificamos de ninguna manera el array food, por ende sigue siendo el mismo: ["🍕", "🍫", "🥑", "🍔"]*/*
+
+//------------------------------------------------------------------------------------------
