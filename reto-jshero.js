@@ -766,3 +766,7 @@ Ahora info se ve así:
 En ningún momento modificamos de ninguna manera el array food, por ende sigue siendo el mismo: ["🍕", "🍫", "🥑", "🍔"]*/*
 
 //------------------------------------------------------------------------------------------
+
+console.log(`${((x) => x)('I love')} to program`);
+
+
