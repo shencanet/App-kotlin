@@ -37,3 +37,12 @@ El operador ??= se llama Logical Nullish Assignment es un operador de corto circ
 Entonces, en el ejemplo, si obj.name evalua como nullish, ejecutamos "Sin Nombre".
 
 Llamamos a la función getName pasandole un objeto vacío, entonces todas sus propiedades son undefined y por consecuencia nullish, por ello a obj.name se el asigna el valor "Sin Nombre" y retornamos ese objeto. */
+
+//-----------------------------------------------------------------------------------------------------------
+const fruits = [
+  { id: 1, name: 'Lime', quantity: 3 },
+  { id: 2, name: 'Apple', quantity: 2 },
+  { id: 3, name: 'Pineapple', quantity: 4 },
+];
+
+const count = fruits.some((fruit) => fruit.quantity > 5);
