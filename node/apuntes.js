@@ -9,3 +9,10 @@ orientado a eventos
 asincrono
 event loop
 
+ npm t epermite tener varias versiones de node en tu maquina
+    npm i -g npm@6.14.8
+fnm es mejor en maquinas windows se debe instalar rust
+
+fnm --version VERSION DE FNM
+fnm list VERSIONES DE NODE INSTaladas
+fnm install 1x.x.0 instalar una versioln concreta de node
