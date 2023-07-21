@@ -73,3 +73,47 @@ Haz esto en tiempo O(M + N) (donde M y N son las longitudes de las listas) y esp
 
 
 Para encontrar el nodo con el valor 8 en las dos listas en tiempo O(M + N) y espacio constante, podemos utilizar un enfoque con dos punteros. Aquí te presento la implementación en JavaScript:*/
+
+class Node {
+  constructor(value, next = null) {
+    this.value = value;
+    this.next = next;
+  }
+}
+
+function findIntersection(A, B) {
+  let ptrA = A;
+  let ptrB = B;
+
+  // Recorremos ambas listas hasta que se crucen o lleguen al final
+  while (ptrA !== ptrB) {
+    // Avanzamos los punteros en ambas listas, si llegan al final, los reasignamos al inicio de la otra lista
+    ptrA = ptrA === null ? B : ptrA.next;
+    ptrB = ptrB === null ? A : ptrB.next;
+  }
+
+  // Si ptrA o ptrB es null en este punto, significa que no hay intersección
+  // Si hay intersección, devolvemos cualquiera de los dos punteros (ambos apuntan al nodo de intersección)
+  return ptrA;
+}
+
+// Ejemplo de uso:
+// Creamos las listas A y B
+const node1 = new Node(3);
+const node2 = new Node(7);
+const node3 = new Node(8);
+const node4 = new Node(10);
+
+const A = node1;
+node1.next = node2;
+node2.next = node3;
+node3.next = node4;
+
+const B = new Node(99, new Node(1, node3));
+
+const intersectionNode = findIntersection(A, B);
+if (intersectionNode) {
+  console.log("El nodo de intersección tiene el valor:", intersectionNode.value); // Salida: El nodo de intersección tiene el valor: 8
+} else {
+  console.log("No hay intersección entre las listas.");
+}
