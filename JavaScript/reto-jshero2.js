@@ -62,3 +62,14 @@ persona.nombre = 'Pedro';
 console.log(persona.nombre);
 
 /*Inicialmente el objeto persona tiene en la llave nombre la cadena Fernando pero luego hacemos persona.nombre = "Pedro" que actualiza el valor de nombre perdiendo la cadena Fernando. */
+
+//-----------------------------------------------------------------------------------------------------------
+/*Por ejemplo, dado A = 3 -> 7 -> 8 -> 10 y B = 99 -> 1 -> 8 -> 10, devuelve el nodo con valor 8.
+
+En este ejemplo, suponga que los nodos con el mismo valor son exactamente los mismos objetos de nodo.
+
+Haz esto en tiempo O(M + N) (donde M y N son las longitudes de las listas) y espacio constante. 
+
+
+
+Para encontrar el nodo con el valor 8 en las dos listas en tiempo O(M + N) y espacio constante, podemos utilizar un enfoque con dos punteros. Aquí te presento la implementación en JavaScript:*/
