@@ -54,3 +54,9 @@ En el ejemplo tenemos un arreglo de elementos (fruits) y tenemos una variable as
 
 some() ejecuta la función callback una vez por cada elemento presente en el array hasta que encuentre uno donde callback retorna un valor verdadero (true). Si se encuentra dicho elemento, some() retorna true inmediatamente. Si no, some() retorna false. */
 
+const persona = {
+  id: 1,
+  nombre: 'Fernando',
+};
+persona.nombre = 'Pedro';
+console.log(persona.nombre);

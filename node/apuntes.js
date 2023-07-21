@@ -16,3 +16,4 @@ fnm es mejor en maquinas windows se debe instalar rust
 fnm --version VERSION DE FNM
 fnm list VERSIONES DE NODE INSTaladas
 fnm install 1x.x.0 instalar una versioln concreta de node
+fnm use 1x.x.0 usar una version de node
