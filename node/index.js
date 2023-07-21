@@ -1,0 +1,5 @@
+console.log("Hola Mundo")
+console.info("Hola Mundo")
+console.error("Hola Mundo")
+console.warn("Hola Mundo")
+console.table("Hola Mundo")
