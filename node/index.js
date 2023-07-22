@@ -1,13 +1,45 @@
-console.log("Hola Mundo")
-console.info("Hola Mundo")
-console.error("Hola Mundo")
-console.warn("Hola Mundo")
-console.table("Hola Mundo")
-//console.log(window)//da error porque no existe window en node
-console.log(global)//global this es una variable global en toda nuestra aplicacion--> apunta a window en el navegador
-//GLOBAL <----NODE  -----< GLOBALTHIS >----->NAVEGADOR---->WINDOW NAVEGADOR APUNTA A WINDOW PERO EN NODE APUNTA A GLOBAL
-globalThis.console.log("Hola Mundo")
-//TODO LO QUE ESTA EN GLOBALTHIS ESTA EN GLOBAL Y VICEVERSA
-console.log(globalThis.XXXXXXXXX)//globalThis es una variable global en toda nuestra aplicacion--> apunta a window en el navegador
-//PATRONES DISEÑO MODULO
-//DIFERENTES MODULOS Y REUTILIZARLO
+//const os = require("os") depre modulo nativo os
+const os = require('node:os')
+console.log("---------------------------------------")
+console.log("Nombre sistema operativo", os.platform())
+console.log("---------------------------------------")
+console.log("Version sistema operativo", os.release())
+console.log("---------------------------------------")
+console.log("Memoria total", os.totalmem())
+console.log("---------------------------------------")
+console.log("Memoria libre", os.freemem())
+console.log("---------------------------------------")
+console.log("os.homedir ",os.homedir())
+console.log("---------------------------------------")
+console.log("os.hostname", os.hostname())
+console.log("---------------------------------------")
+console.log("os.cpus",os.cpus())
+console.log("---------------------------------------")
+console.log("os.totalmem", os.totalmem())
+console.log("---------------------------------------")
+console.log("os.uptime", os.uptime())
+console.log("---------------------------------------")
+console.log("os.userInfo", os.userInfo())
+console.log("---------------------------------------")
+console.log("os.version",os.version())
+console.log("---------------------------------------")
+console.log("os.release", os.release())
+console.log("---------------------------------------")
+console.log("os.type",os.type())
+console.log("---------------------------------------")
+console.log("os.arch",os.arch())
+console.log("---------------------------------------")
+console.log("os.networkInterfaces", os.networkInterfaces())
+console.log("---------------------------------------")
+console.log("os.loadavg", os.loadavg())
+console.log("---------------------------------------")
+console.log("os.constants", os.constants)
+console.log("---------------------------------------")
+console.log("os.EOL", os.EOL)
+console.log("---------------------------------------")
+console.log("os.endianness", os.endianness())
+console.log("---------------------------------------")
+console.log("os.tmpdir", os.tmpdir())
+
+
+// Path: node\index.js  
