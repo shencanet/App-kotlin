@@ -15,8 +15,6 @@ console.log("os.hostname", os.hostname())
 console.log("---------------------------------------")
 console.log("os.cpus",os.cpus())
 console.log("---------------------------------------")
-console.log("os.totalmem", os.totalmem())
-console.log("---------------------------------------")
 console.log("os.uptime", os.uptime())
 console.log("---------------------------------------")
 console.log("os.userInfo", os.userInfo())
@@ -41,7 +39,8 @@ console.log("os.endianness", os.endianness())
 console.log("---------------------------------------")
 console.log("os.tmpdir", os.tmpdir())
 console.log("---------------------------------------")
-console.log(os.uptime()/ 60 /60 )
+console.log(os.uptime()/ 60 /60 )//horas
+console.log(os.uptime()/60)//minutos
 
 
 // Path: node\index.js  
