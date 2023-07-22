@@ -169,3 +169,12 @@ if (intersectionNode) {
 En este código, utilizamos dos punteros ptrA y ptrB para recorrer ambas listas A y B. Avanzamos los punteros al siguiente nodo en cada iteración hasta que los dos punteros sean iguales (es decir, apunten al mismo nodo) o lleguen al final de las listas. En caso de que los punteros no se crucen, no hay intersección y retornamos null. Si los punteros se cruzan, significa que encontramos el nodo de intersección y lo devolvemos.
 
 Este algoritmo tiene un tiempo de complejidad O(M + N), ya que como mucho recorrerá toda la longitud de ambas listas antes de encontrar la intersección o llegar al final. También utiliza un espacio constante, ya que no se utilizan estructuras de datos adicionales más allá de los punteros.*/
+
+//-----------------------------------------------------------------------------------------------------------
+anotherFn();
+
+function anotherFn() {
+  console.log(myNumber + myNumber);
+}
+
+let myNumber = 8;
