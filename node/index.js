@@ -1,5 +1,6 @@
 //const os = require("os") depre modulo nativo os
 const os = require('node:os')
+import { platform, release, arch, freeman, totalmem } from 'node:os'
 console.log("---------------------------------------")
 console.log("Nombre sistema operativo", os.platform())
 console.log("---------------------------------------")
