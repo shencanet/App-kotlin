@@ -26,3 +26,12 @@ fs.readFile('./archivo2.txt', 'utf-8',(err, text) => {
 console.log('leyendo el tercer archivo......')
 const text = fs.readFileSync('./archivo3.txt', 'utf-8')//sincrona
 console.log(text)*/
+
+//------------------Escribir archivos------------------
+const banda = {
+    id: 1,
+    nombre: 'Radiohead',
+    'tipo de musica': 'Rock',
+    albunes: ['Pablo Honey', 'Ok Computer', 'In Rainbows'],
+  };
+  console.log(banda['nom' + 'bre']);
