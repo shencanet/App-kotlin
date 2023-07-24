@@ -28,3 +28,8 @@ console.log('leyendo el tercer archivo......')
 const text = fs.readFileSync('./archivo3.txt', 'utf-8')//sincrona
 console.log(text)*/
 
+async () => {
+    console.log('leyendo el cuarto archivo......')
+    const text = await fs.readFile('./archivo4.txt', 'utf-8')
+    console.log('TESTO ASINCRONO ',text)
+}
