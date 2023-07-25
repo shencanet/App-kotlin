@@ -6,6 +6,6 @@ fs.readdir('.', (err, files) => {
         return;
     }
     files.forEach(file => {
-    console.log(files)
+    console.log(file)
 })
 })
