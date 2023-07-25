@@ -260,3 +260,8 @@ function fruits() {
 }
 
 fruits();
+/*
+Respuesta Correcta: A) ReferenceError: fruit2 is not defined
+ES6 introdujo las variables let y const. Con eso, introdujo el alcance de bloque.
+
+El alcance del bloque significa que las variables definidas dentro de un bloque de código {} solo se pueden usar dentro de él.*/
