@@ -14,3 +14,5 @@ if(i === 5){
     var a = 3 + z;
 }
 }, 100);
+
+console.log('acaba el programa')
