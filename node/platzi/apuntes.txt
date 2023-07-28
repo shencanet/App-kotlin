@@ -1,1 +1,5 @@
 //npx nodemon archivo.js 
+
+//pm2 para pro
+pm2 status estadisticas
+pm2 logs

@@ -297,3 +297,9 @@ Para finalizar, cuando hacemos:
 Modificamos el valor de objeto1 pero como apuntan a la misma dirección de momoria entonces también modificamos el valor del objeto2 a 15.
 
 El objeto3 no sufre ningún cambio.*/
+
+//-----------------------------------------------------------------------------------------------------------
+const banda = 'Coldplay';
+const canciones = ['Yellow', 'Fix You', 'Trouble'];
+console.log(banda['length']);
+console.log(canciones['len' + 'gth']);
