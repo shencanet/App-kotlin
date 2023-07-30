@@ -338,3 +338,9 @@ undefined ?? 0: Operando tenemos como resultado 0 por que undefined es un valor 
 
 
 Finalmente "0" como cadena no es un valor falsy entonces no podemos ejecutar el operador de corto circuito dando como resultado final "0".*/
+
+/-----------------------------------------------------------------------------------------------------------
+function sumar(a, b) {
+  return a + b;
+}
+sumar(2, 4);
