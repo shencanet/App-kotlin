@@ -358,4 +358,13 @@ Diferencias:
 
 - Las funciones declarativas pueden ser invocadas inclusive antes de ser declaradas en el orden secuencial del código, debido de igual manera al efecto ocasionado por el hoisting.
 
-- Contrario a lo anterior, una función expresiva únicamente puede ser invocada luego de haber sido generada en el orden lógico del código a causa de que esta no es afectada por el hoisting. /
+- Contrario a lo anterior, una función expresiva únicamente puede ser invocada luego de haber sido generada en el orden lógico del código a causa de que esta no es afectada por el hoisting. */
+
+//-----------------------------------------------------------------------------------------------------------
+const fruits = [
+  { id: 1, name: 'Kiwi', quantity: 5 },
+  { id: 2, name: 'Banana', quantity: 30 },
+  { id: 3, name: 'Pineapple', quantity: 3 },
+];
+
+const count = fruits.some((fruit) => fruit.quantity > 30);
