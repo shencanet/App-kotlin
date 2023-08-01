@@ -375,3 +375,7 @@ El método some() comprueba si al menos un elemento del array cumple con la cond
 En el ejemplo tenemos un arreglo de elementos (fruits) y tenemos una variable asignada a count con la cual estamos utilizando el método some() para validar si el arreglo cumple con la condición implementada, la cantidad sea mayor a 5.
 
 some() ejecuta la función callback una vez por cada elemento presente en el array hasta que encuentre uno donde callback retorna un valor verdadero (true). Si se encuentra dicho elemento, some() retorna true inmediatamente. Si no, some() retorna false. */
+
+
+//-----------------------------------------------------------------------------------------------------------
+console.log(typeof ('22' - 0));
