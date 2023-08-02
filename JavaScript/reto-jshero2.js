@@ -389,3 +389,8 @@ Si intentamos usar este hack con cadenas no numéricas la conversión se realiza
 
   console.log(typeof("aaa" - 0)); // number 
  console.log(("aaa" - 0)); // NaN  */
+
+ //-----------------------------------------------------------------------------------------------------------
+ const numeros = [1, 2, 3, 4, 5];
+numeros.length = 0;
+console.log(numeros); // ?
