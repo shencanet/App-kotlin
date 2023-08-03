@@ -403,3 +403,4 @@ En este caso usar length y "setterlo" a 0 es una buena manera de borrar todos lo
 //-----------------------------------------------------------------------------------------------------------
 const arr = [];
 console.log(Array.isArray(arr)); // ??
+
