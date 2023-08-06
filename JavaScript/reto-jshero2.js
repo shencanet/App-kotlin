@@ -434,3 +434,6 @@ split es un String Method que se encarga de convertir una cadena en arreglo, don
 Spread Operator (...) expandirá o propagará la cadena Alejandro en ["A","l","e","j","a","n","d","r","o"]. El Spread Operator no solo funciona con arreglos, también puede ser usado con cadenas.
 
 Array.from es desde ES6 una manera más de convertir cadenas a arreglos, tambiém regresa ["A","l","e","j","a","n","d","r","o"]. */
+
+//-----------------------------------------------------------------------------------------------------------
+console.log('hola'.split('').reverse().join('')); // ?
