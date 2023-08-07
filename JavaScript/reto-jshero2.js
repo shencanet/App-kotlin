@@ -448,4 +448,13 @@ Aplicamos reverse:
 reverse es un método de arreglos, invierte todos los elementos del arreglo: ["a","l","o","h"].
 
 Aplicamos join:
-join es un método de arreglos que convierte un arreglo en cadena nuevamente dependiendo del parámetro que se le pase, en este caso una cadena vacía: "aloh"/*
+join es un método de arreglos que convierte un arreglo en cadena nuevamente dependiendo del parámetro que se le pase, en este caso una cadena vacía: "aloh"*/
+
+//-----------------------------------------------------------------------------------------------------------
+//A
+const multiplicar = (a) => (b) => a * b;
+//B
+const test = (nombre, accion) => {
+  return accion(nombre);
+};
+console.log(test('Ana', console.log)); //Ana (por consola)
