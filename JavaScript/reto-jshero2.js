@@ -476,4 +476,8 @@ multiplicar aunque no lo parezca regresa otra función, podría escribirse tambi
 
 Acá se observa mejor que multiplicar regresa una función anónima que realiza la operación del producto, es mucho más sencillo usar retornos implícitos para poder escribir lo mismo en una sola línea como en el ejemplo original.
 
-test recibe 2 parámetros, uno de ellos es una función que en el ejemplo es console.log de javascript nativo, esto es motivo suficiente para que sea considera una Higher Order Function. */
+test recibe 2 parámetros, uno de ellos es una función que en el ejemplo es console.log de javascript nativo, esto es motivo suficiente para que sea considera una Higher Order Function.  */
+
+//-----------------------------------------------------------------------------------------------------------
+const numeros = [1, 2, [3, 4], 5, 6, [7, 8], 9, 0];
+console.log(numeros.flat()); // ?
