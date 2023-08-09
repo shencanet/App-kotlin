@@ -486,3 +486,12 @@ console.log(numeros.flat()); // ?
 flat es un array method que crea un nuevo arreglo con los elementos concatenados recursivamente hasta una profundidad especificada.
 Dicho en otras palabras, permite "aplanar" un arreglo anidado un número determinado de veces. Es una buena alernativa a usar por ejemplo reduce para hacer lo mismo y no muchos devs conocen que existe esta catacterística en el lenguaje.*/
 //-----------------------------------------------------------------------------------------------------------
+var nombre = 'Camila';
+let apellido = 'Rodriguez';
+const edad = 25;
+const getDatosPersonales = () => {
+  console.log(nombre);
+  console.log(apellido);
+  console.log(edad);
+};
+console.log(getDatosPersonales());
