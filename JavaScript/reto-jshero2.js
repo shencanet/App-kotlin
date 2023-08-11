@@ -521,4 +521,12 @@ const objB =  objA;
 objA.age = 99;
 console.log( objB.age); // 99
 
-Quiere decir que no estamos copiando el valor, sino la referencia, por lo tanto, un cambio en él puede tener consecuencias en otro./*
+Quiere decir que no estamos copiando el valor, sino la referencia, por lo tanto, un cambio en él puede tener consecuencias en otro.*/
+
+//-----------------------------------------------------------------------------------------------------------
+const test = {
+  if: 'Es un condicional',
+  let: 'Es una manera de declarar variables',
+  for: 'Es un bucle',
+};
+console.log(test.for); //??
