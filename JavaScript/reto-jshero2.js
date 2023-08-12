@@ -536,3 +536,7 @@ Respuesta Correcta: B) Es un bucle
 Dentro de un objeto literal es posible usar nombres de palabras reservadas del lenguaje como nombres de keys, esto es perfectamente valido.
 
 ❌ Pese a que es valido, se recomienda no hacer esto y respetar las palabras reservadas de javascript. ¡No hagas nunca esto! Solo se conciente que es posible.*/
+
+let nombre = 'Cris';
+let edad = 25;
+console.log('Mi nombre es %s y tengo %d', nombre, edad);
