@@ -558,3 +558,13 @@ Cuando pretendemos hacer una desestructuración de arreglos es súper importante
 En el ejemplo usamos 3 veces , por ello saltamos 3 posiciones del arreglo nombres para poder obtener (con spread operator) la cadena Cris del arreglo anidado.
 
 Finalmente aplicamos el método length con sintaxis de corchete.*/
+
+//-----------------------------------------------------------------------------------------------------------
+function test() {
+  let nombre = 'Alex';
+  if (true) {
+    console.log(nombre);
+    let nombre = 'Oscar';
+  }
+}
+console.log(test());
