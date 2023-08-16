@@ -13,3 +13,9 @@ Recibe como parámetro un número que representa en este ejemplo el índice al c
 .at(-1) regresa el item "Angela", es una manera elegante de acceder al último item de un arreglo.
 .at(10) regresa undefiend puesto que no existe un item con dicho índice en el arreglo.
 .at(3.8) y .at(-3.3) solo tomaran la parte entera del parámetro, por ende tendremos .at(3) que regresa "Christian" y at.(-3) que regresa "Freddy".*/
+
+
+const f = (arr) => Array.isArray(arr) && !arr.length;
+console.log(f([1, 2, 3])); //?
+console.log(f([0])); //?
+console.log(f([])); //?
