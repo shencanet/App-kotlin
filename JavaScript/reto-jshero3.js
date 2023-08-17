@@ -45,3 +45,56 @@ Conclusión: false false true.*/
 Dada una cadena con caracteres repetidos, reorganice la cadena para que no haya dos caracteres adyacentes iguales. Si esto no es posible, devuelve None .
 
 Por ejemplo, dado "aaabbc", podría devolver "ababac". Dado "aaab", devuelve None . */
+
+function reorganizeString(s) {
+    const charCount = {};
+    for (const char of s) {
+        charCount[char] = (charCount[char] || 0) + 1;
+    }
+    
+    const maxHeap = [];
+    for (const char in charCount) {
+        maxHeap.push({ char, count: charCount[char] });
+    }
+    
+    maxHeap.sort((a, b) => b.count - a.count);
+    
+    let prevChar = '';
+    const result = [];
+    
+    while (maxHeap.length > 0) {
+        const current = maxHeap.shift();
+        
+        if (current.char === prevChar) {
+            if (maxHeap.length === 0) {
+                return null;
+            }
+            
+            const next = maxHeap.shift();
+            maxHeap.push(current);
+            current.char = next.char;
+            current.count = next.count;
+        }
+        
+        result.push(current.char);
+        prevChar = current.char;
+        
+        if (current.count > 1) {
+            maxHeap.push({ char: current.char, count: current.count - 1 });
+        }
+        
+        maxHeap.sort((a, b) => b.count - a.count);
+    }
+    
+    return result.join('');
+}
+
+// Ejemplos
+const inputStr1 = "aaabbc";
+const inputStr2 = "aaab";
+
+const outputStr1 = reorganizeString(inputStr1);
+const outputStr2 = reorganizeString(inputStr2);
+
+console.log(outputStr1);  // Output: "ababac" (o cualquier otra reorganización válida)
+console.log(outputStr2);  // Output: null
