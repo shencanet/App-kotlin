@@ -39,3 +39,9 @@ Veamos caso por caso:
 [] es un arreglo y si esta vacío. Entonces tendriamos: true && true, que evalua a true.
 
 Conclusión: false false true.*/
+
+//--------------------Ejercicio 4--------------------
+/*
+Dada una cadena con caracteres repetidos, reorganice la cadena para que no haya dos caracteres adyacentes iguales. Si esto no es posible, devuelve None .
+
+Por ejemplo, dado "aaabbc", podría devolver "ababac". Dado "aaab", devuelve None . */
