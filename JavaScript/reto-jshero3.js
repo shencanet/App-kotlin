@@ -98,3 +98,6 @@ const outputStr2 = reorganizeString(inputStr2);
 
 console.log(outputStr1);  // Output: "ababac" (o cualquier otra reorganización válida)
 console.log(outputStr2);  // Output: null
+
+/*
+Esta implementación utiliza un enfoque similar al anterior, utilizando un arreglo para representar un montículo (heap) y ordenando el arreglo cada vez que se inserta un nuevo elemento. Si no es posible reorganizar la cadena de manera que no haya caracteres adyacentes iguales, devuelve null. Ten en cuenta que, al igual que en la implementación anterior, existen múltiples reorganizaciones posibles para cadenas que cumplen con los criterios, por lo que el resultado podría variar.*/
