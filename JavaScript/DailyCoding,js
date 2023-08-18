@@ -61,3 +61,53 @@ Recuerda que los valores esperados pueden variar ligeramente con cada ejecución
 
 */
 
+// Función para simular un juego dado una secuencia objetivo
+function simulateGame(targetSequence) {
+    let consecutiveRolls = 0;
+    let totalRolls = 0;
+
+    // Simular el juego hasta que se alcance la secuencia objetivo
+    while (consecutiveRolls < targetSequence.length) {
+        const roll = Math.floor(Math.random() * 6) + 1;
+        totalRolls++;
+
+        if (roll === targetSequence[consecutiveRolls]) {
+            consecutiveRolls++;
+        } else {
+            consecutiveRolls = 0;
+        }
+    }
+
+    return totalRolls; // Devolver el número de rolls necesarios
+}
+
+// Función para calcular el valor esperado dado una secuencia objetivo y el número de simulaciones
+function calculateExpectedValue(targetSequence, numSimulations) {
+    let totalRolls = 0;
+
+    // Realizar las simulaciones
+    for (let i = 0; i < numSimulations; i++) {
+        totalRolls += simulateGame(targetSequence);
+    }
+
+    return totalRolls / numSimulations; // Calcular el valor esperado promediando los rolls
+}
+
+const numSimulations = 100000; // Número de simulaciones
+
+// Calcular los valores esperados para ambos juegos
+const game1ExpectedValue = calculateExpectedValue([5, 6], numSimulations);
+const game2ExpectedValue = calculateExpectedValue([5, 5], numSimulations);
+
+// Imprimir los valores esperados
+console.log(`Expected value for Game 1: ${game1ExpectedValue}`);
+console.log(`Expected value for Game 2: ${game2ExpectedValue}`);
+
+// Comparar los valores esperados y dar una recomendación a Alice
+if (game1ExpectedValue < game2ExpectedValue) {
+    console.log("Alice should choose Game 1.");
+} else if (game1ExpectedValue > game2ExpectedValue) {
+    console.log("Alice should choose Game 2.");
+} else {
+    console.log("It doesn't matter which game Alice chooses.");
+}
