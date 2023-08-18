@@ -1,0 +1,8 @@
+ /*
+ Alice quiere unirse al club de estudiantes de probabilidad de su escuela. Las cuotas de membresía se calculan a través de uno de dos juegos probabilísticos simples.
+
+El primer juego: tirar un dado repetidamente. Deja de rodar una vez que obtengas un cinco seguido de un seis. Su número de rollos es la cantidad que paga, en dólares.
+
+El segundo juego: lo mismo, excepto que la condición de parada es un cinco seguido de un cinco.
+
+¿Cuál de los dos juegos debería elegir Alicia para jugar? ¿Importa siquiera? Escriba un programa para simular los dos juegos y calcule su valor esperado*/
