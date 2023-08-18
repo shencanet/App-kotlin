@@ -111,3 +111,4 @@ if (game1ExpectedValue < game2ExpectedValue) {
 } else {
     console.log("It doesn't matter which game Alice chooses.");
 }
+/*Este programa hace uso de funciones para simular un juego y calcular el valor esperado. Se realizan un número de simulaciones especificado por numSimulations, y luego se comparan los valores esperados para ambos juegos para determinar cuál juego es más favorable en términos de costo esperado.*/
