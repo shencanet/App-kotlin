@@ -5,4 +5,59 @@ El primer juego: tirar un dado repetidamente. Deja de rodar una vez que obtengas
 
 El segundo juego: lo mismo, excepto que la condición de parada es un cinco seguido de un cinco.
 
-¿Cuál de los dos juegos debería elegir Alicia para jugar? ¿Importa siquiera? Escriba un programa para simular los dos juegos y calcule su valor esperado*/
+¿Cuál de los dos juegos debería elegir Alicia para jugar? ¿Importa siquiera? Escriba un programa para simular los dos juegos y calcule su valor esperado
+Para determinar cuál de los dos juegos debería elegir Alice, podemos calcular el valor esperado para cada juego y luego compararlos. El valor esperado representa el promedio ponderado de todas las posibles ganancias o pérdidas en un juego, considerando las probabilidades de cada resultado.
+
+Aquí tienes un programa en JavaScript que simula ambos juegos y calcula sus valores esperados:
+
+javascript
+
+function simulateGame(rolls, targetSequence) {
+    let consecutiveRolls = 0;
+    let totalRolls = 0;
+
+    while (consecutiveRolls < targetSequence.length) {
+        const roll = Math.floor(Math.random() * 6) + 1;
+        totalRolls++;
+
+        if (roll === targetSequence[consecutiveRolls]) {
+            consecutiveRolls++;
+        } else {
+            consecutiveRolls = 0;
+        }
+    }
+
+    return totalRolls;
+}
+
+function calculateExpectedValue(targetSequence, numSimulations) {
+    let totalRolls = 0;
+
+    for (let i = 0; i < numSimulations; i++) {
+        totalRolls += simulateGame(0, targetSequence);
+    }
+
+    return totalRolls / numSimulations;
+}
+
+const numSimulations = 100000;
+const game1ExpectedValue = calculateExpectedValue([5, 6], numSimulations);
+const game2ExpectedValue = calculateExpectedValue([5, 5], numSimulations);
+
+console.log(`Expected value for Game 1: ${game1ExpectedValue}`);
+console.log(`Expected value for Game 2: ${game2ExpectedValue}`);
+
+if (game1ExpectedValue < game2ExpectedValue) {
+    console.log("Alice should choose Game 1.");
+} else if (game1ExpectedValue > game2ExpectedValue) {
+    console.log("Alice should choose Game 2.");
+} else {
+    console.log("It doesn't matter which game Alice chooses.");
+}
+
+Este programa simula ambos juegos un gran número de veces (controlado por numSimulations) y luego calcula el valor esperado para cada juego. Finalmente, compara los valores esperados y le indica a Alice cuál juego debería elegir en función de los resultados.
+
+Recuerda que los valores esperados pueden variar ligeramente con cada ejecución debido a la naturaleza aleatoria de los juegos. Ejecutar el programa varias veces con un número suficiente de simulaciones te dará una idea más precisa de qué juego es mejor en promedio.
+
+*/
+
